@@ -9,6 +9,8 @@ using namespace std;
 #include "SmartDeviceIterator.h"
 #include "DeviceCollection.h"
 
+#include <list>	
+
 class SmartDevice;
 class DeviceIterator;
 class SmartDeviceIterator;
@@ -17,10 +19,11 @@ class Room;
 
 class Room: public DeviceCollection
 {
-	private: List<SmartDevice> _devices;
-	public: DeviceIterator* _unnamed_DeviceIterator_;
+	private: 
+		std::list<SmartDevice> devices;
 
-	public: SmartDeviceIterator createIterator();
+	public: 
+		DeviceIterator createIterator();
 };
 
 #endif

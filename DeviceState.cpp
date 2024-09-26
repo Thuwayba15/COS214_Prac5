@@ -9,7 +9,7 @@ string DeviceState::getStatus() {
 	throw "Not yet implemented";
 }
 
-void DeviceState::performAction(SmartDevice aDevice, string aAction) {
+void DeviceState::performAction(SmartDevice device, string action) {
 	throw "Not yet implemented";
 }
 

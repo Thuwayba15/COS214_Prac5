@@ -4,11 +4,11 @@ using namespace std;
 #include "Sensor.h"
 #include "SmartDevice.h"
 
-void Sensor::addDevice(SmartDevice aDevice) {
+void Sensor::addDevice(SmartDevice device) {
 	throw "Not yet implemented";
 }
 
-void Sensor::removeDevice(SmartDevice aDevice) {
+void Sensor::removeDevice(SmartDevice device) {
 	throw "Not yet implemented";
 }
 

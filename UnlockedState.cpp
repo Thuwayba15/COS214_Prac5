@@ -10,7 +10,7 @@ string UnlockedState::getStatus() {
 	throw "Not yet implemented";
 }
 
-void UnlockedState::performAction(SmartDevice aDevice, string aAction) {
+void UnlockedState::performAction(SmartDevice device, string action) {
 	throw "Not yet implemented";
 }
 

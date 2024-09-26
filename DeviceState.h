@@ -10,13 +10,11 @@ using namespace std;
 class SmartDevice;
 class DeviceState;
 
-__abstract class DeviceState
+class DeviceState
 {
-	public: SmartDevice* _unnamed_SmartDevice_;
-
-	public: virtual string getStatus() = 0;
-
-	public: virtual void performAction(SmartDevice aDevice, string aAction) = 0;
+	public: 
+		virtual string getStatus() = 0;
+		virtual void performAction(SmartDevice device, string action) = 0;
 };
 
 #endif

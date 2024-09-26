@@ -15,10 +15,7 @@ class Client;
 
 class Client
 {
-	public: SmartDevice* _unnamed_SmartDevice_;
-	public: SmartThermostatIntegrator* _unnamed_SmartThermostatIntegrator_;
-	public: DeviceCollection* _unnamed_DeviceCollection_;
-	public: SmartDeviceIterator* _unnamed_SmartDeviceIterator_;
+	
 };
 
 #endif

@@ -1,6 +1,7 @@
 #include <exception>
 #include <string>
 using namespace std;
+#include <iostream>
 
 #include "SmartThermostatIntegrator.h"
 #include "LegacyThermostat.h"
@@ -8,7 +9,7 @@ using namespace std;
 #include "SmartThermostat.h"
 #include "SmartDevice.h"
 
-void SmartThermostatIntegrator::setTemperature(int aTemp) {
+void SmartThermostatIntegrator::setTemperature(int temp) {
 	throw "Not yet implemented";
 }
 
@@ -16,7 +17,7 @@ int SmartThermostatIntegrator::getTemperature() {
 	throw "Not yet implemented";
 }
 
-void SmartThermostatIntegrator::update(string aCondition) {
-	throw "Not yet implemented";
+void SmartThermostatIntegrator::update(string condition) {
+	std::cout<<"waiting"<<std::endl;
 }
 

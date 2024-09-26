@@ -8,6 +8,7 @@ using namespace std;
 // #include "DeviceIterator.h"
 #include "SmartDeviceIterator.h"
 #include "DeviceCollection.h"
+#include <list>
 
 class Room;
 class DeviceIterator;
@@ -17,10 +18,11 @@ class HouseSection;
 
 class HouseSection: public DeviceCollection
 {
-	private: List<Room> _rooms;
-	public: DeviceIterator* _unnamed_DeviceIterator_;
+	private: 
+		std::list<Room> rooms;
 
-	public: SmartDeviceIterator createIterator();
+	public: 
+		DeviceIterator createIterator();
 };
 
 #endif

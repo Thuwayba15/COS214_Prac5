@@ -4,13 +4,14 @@
 
 class SmartThermostat;
 
-__abstract class SmartThermostat
+class SmartThermostat
 {
-	private: int _temperature;
+	private: 
+		int temperature;
 
-	public: virtual void setTemperature(int aTemp) = 0;
-
-	public: virtual int getTemperature() = 0;
+	public: 
+		virtual void setTemperature(int temp) = 0;
+		virtual int getTemperature() = 0;
 };
 
 #endif

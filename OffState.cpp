@@ -10,7 +10,7 @@ string OffState::getStatus() {
 	throw "Not yet implemented";
 }
 
-void OffState::performAction(SmartDevice aDevice, string aAction) {
+void OffState::performAction(SmartDevice device, string action) {
 	throw "Not yet implemented";
 }
 

@@ -18,15 +18,13 @@ class SmartThermostatIntegrator;
 
 class SmartThermostatIntegrator: public SmartThermostat, public SmartDevice
 {
-	private: LegacyThermostat _legacyThermostat;
-	public: Client* _unnamed_Client_;
-	public: LegacyThermostat* _unnamed_LegacyThermostat_;
+	private: 
+		LegacyThermostat legacyThermostat;
 
-	public: void setTemperature(int aTemp);
-
-	public: int getTemperature();
-
-	public: void update(string aCondition);
+	public: 
+		void setTemperature(int temp);
+		int getTemperature();
+		void update(string condition);
 };
 
 #endif

@@ -13,7 +13,8 @@ class Light;
 class Light: public SmartDevice
 {
 
-	public: void update(string aCondition);
+	public: 
+		void update(string condition);
 };
 
 #endif

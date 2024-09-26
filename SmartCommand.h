@@ -9,11 +9,10 @@ using namespace std;
 class MacroRoutine;
 class SmartCommand;
 
-__abstract class SmartCommand
+class SmartCommand
 {
-	public: MacroRoutine* _unnamed_MacroRoutine_;
-
-	public: virtual void execute() = 0;
+	public: 
+		virtual void execute() = 0;
 };
 
 #endif

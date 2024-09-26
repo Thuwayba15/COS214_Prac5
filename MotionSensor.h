@@ -12,7 +12,8 @@ class MotionSensor;
 class MotionSensor: public Sensor
 {
 
-	public: void detectMovement();
+	public: 
+		void detectMovement();
 };
 
 #endif

@@ -6,7 +6,7 @@ using namespace std;
 #include "Client.h"
 #include "SmartDeviceIterator.h"
 
-SmartDeviceIterator DeviceCollection::createIterator() {
-	throw "Not yet implemented";
-}
+// SmartDeviceIterator DeviceCollection::createIterator() {
+// 	throw "Not yet implemented";
+// }
 

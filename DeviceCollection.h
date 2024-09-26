@@ -7,18 +7,21 @@ using namespace std;
 #include "SmartDevice.h"
 // #include "Client.h"
 #include "SmartDeviceIterator.h"
+#include <list>
+#include "DeviceIterator.h"
 
 class SmartDevice;
 class Client;
 class SmartDeviceIterator;
 class DeviceCollection;
 
-__abstract class DeviceCollection
+class DeviceCollection
 {
-	private: List<SmartDevice> _devices;
-	public: Client* _unnamed_Client_;
+	private: 
+		std::list<SmartDevice> devices;
 
-	public: virtual SmartDeviceIterator createIterator() = 0;
+	public: 
+		virtual DeviceIterator createIterator() = 0;
 };
 
 #endif

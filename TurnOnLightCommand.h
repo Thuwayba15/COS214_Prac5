@@ -13,10 +13,11 @@ class TurnOnLightCommand;
 
 class TurnOnLightCommand: public SmartCommand
 {
-	private: SmartDevice _smartDevice;
-	public: SmartDevice* _unnamed_SmartDevice_;
+	private: 
+		SmartDevice smartDevice;
 
-	public: void execute();
+	public: 
+		void execute();
 };
 
 #endif

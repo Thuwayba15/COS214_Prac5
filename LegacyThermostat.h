@@ -11,12 +11,12 @@ class LegacyThermostat;
 
 class LegacyThermostat
 {
-	private: int _currentTemperature;
-	public: SmartThermostatIntegrator* _unnamed_SmartThermostatIntegrator_;
+	private:
+	 	int currentTemperature;
 
-	public: void setTemp(int aTemp);
-
-	public: int getTemp();
+	public: 
+		void setTemp(int temp);
+		int getTemp();
 };
 
 #endif

@@ -9,16 +9,15 @@ using namespace std;
 class SmartDevice;
 class Sensor;
 
-__abstract class Sensor
+class Sensor
 {
-	private: SmartDevice* _deviceList;
-	public: SmartDevice* _unnamed_SmartDevice_;
+	private: 
+		SmartDevice* deviceList;
 
-	public: void addDevice(SmartDevice aDevice);
-
-	public: void removeDevice(SmartDevice aDevice);
-
-	public: void notifyDevices();
+	public: 
+		void addDevice(SmartDevice device);
+		void removeDevice(SmartDevice device);
+		void notifyDevices();
 };
 
 #endif

@@ -19,20 +19,16 @@ class DeviceIterator;
 
 class DeviceIterator: public SmartDeviceIterator
 {
-	private: DeviceCollection _deviceCollection;
-	private: int _currentIndex;
-	public: HouseSection* _unnamed_HouseSection_;
-	public: Room* _unnamed_Room_;
+	private: 
+		DeviceCollection* deviceCollection;
+	 	int currentIndex;
 
-	public: SmartDevice first();
-
-	public: SmartDevice currentItem();
-
-	public: bool isDone();
-
-	public: SmartDevice next();
-
-	public: bool hasNext();
+	public: 
+		SmartDevice first();
+		SmartDevice currentItem();
+		bool isDone();
+		SmartDevice next();
+		bool hasNext();
 };
 
 #endif

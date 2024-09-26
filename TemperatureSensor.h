@@ -12,7 +12,8 @@ class TemperatureSensor;
 class TemperatureSensor: public Sensor
 {
 
-	public: void senseTemperature();
+	public: 
+		void senseTemperature();
 };
 
 #endif

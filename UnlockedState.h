@@ -15,9 +15,11 @@ class UnlockedState;
 class UnlockedState: public DeviceState
 {
 
-	public: string getStatus();
+	public: 
+		string getStatus();
 
-	public: void performAction(SmartDevice aDevice, string aAction);
+	public: 
+		void performAction(SmartDevice device, string action);
 };
 
 #endif

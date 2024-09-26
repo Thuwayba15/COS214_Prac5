@@ -7,7 +7,7 @@ using namespace std;
 #include "SmartDeviceIterator.h"
 #include "DeviceCollection.h"
 
-SmartDeviceIterator HouseSection::createIterator() {
+DeviceIterator HouseSection::createIterator() {
 	throw "Not yet implemented";
 }
 

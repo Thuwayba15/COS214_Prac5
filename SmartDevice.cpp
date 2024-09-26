@@ -11,7 +11,7 @@ using namespace std;
 #include "LockDoorCommand.h"
 #include "Client.h"
 
-void SmartDevice::performAction(string aAction) {
+void SmartDevice::performAction(string action) {
 	throw "Not yet implemented";
 }
 
@@ -20,14 +20,14 @@ string SmartDevice::getStatus() {
 }
 
 string SmartDevice::getDeviceType() {
-	return this->_deviceType;
+	return this->deviceType;
 }
 
-void SmartDevice::setState(DeviceState aState) {
-	this->_state = aState;
+void SmartDevice::setState(DeviceState* state) {
+	this->state = state;
 }
 
-void SmartDevice::update(string aCondition) {
+void SmartDevice::update(string condition) {
 	throw "Not yet implemented";
 }
 

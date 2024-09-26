@@ -22,28 +22,19 @@ class LockDoorCommand;
 class Client;
 class SmartDevice;
 
-__abstract class SmartDevice
+class SmartDevice
 {
-	private: DeviceState _state;
-	private: string _deviceType;
-	private: string _location;
-	public: TurnOffLightCommand* _unnamed_TurnOffLightCommand_;
-	public: Sensor* _unnamed_Sensor_;
-	public: DeviceState* _unnamed_DeviceState_;
-	public: UnlockDoorCommand* _unnamed_UnlockDoorCommand_;
-	public: TurnOnLightCommand* _unnamed_TurnOnLightCommand_;
-	public: LockDoorCommand* _unnamed_LockDoorCommand_;
-	public: Client* _unnamed_Client_;
+	private: 
+		DeviceState* state;
+		string deviceType;
+		string location;
 
-	public: void performAction(string aAction);
-
-	public: string getStatus();
-
-	public: string getDeviceType();
-
-	public: void setState(DeviceState aState);
-
-	public: virtual void update(string aCondition) = 0;
+	public: 
+		void performAction(string action);
+		string getStatus();
+		string getDeviceType();
+		void setState(DeviceState* state);
+		virtual void update(string condition);
 };
 
 #endif

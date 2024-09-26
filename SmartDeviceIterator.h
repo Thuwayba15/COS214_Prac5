@@ -11,19 +11,14 @@ class Client;
 class SmartDevice;
 class SmartDeviceIterator;
 
-__abstract class SmartDeviceIterator
+class SmartDeviceIterator
 {
-	public: Client* _unnamed_Client_;
-
-	public: virtual SmartDevice first() = 0;
-
-	public: virtual SmartDevice next() = 0;
-
-	public: virtual bool hasNext() = 0;
-
-	public: virtual bool isDone() = 0;
-
-	public: virtual SmartDevice currentItem() = 0;
+	public: 
+		virtual SmartDevice first() = 0;
+		virtual SmartDevice next() = 0;
+		virtual bool hasNext() = 0;
+		virtual bool isDone() = 0;
+		virtual SmartDevice currentItem() = 0;
 };
 
 #endif

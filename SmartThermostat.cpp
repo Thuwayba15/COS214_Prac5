@@ -1,10 +1,10 @@
 
 #include "SmartThermostat.h"
-void SmartThermostat::setTemperature(int aTemp) {
-	this->_temperature = aTemp;
+void SmartThermostat::setTemperature(int temp) {
+	this->temperature = temp;
 }
 
 int SmartThermostat::getTemperature() {
-	return this->_temperature;
+	return this->temperature;
 }
 

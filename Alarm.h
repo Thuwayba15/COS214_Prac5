@@ -13,7 +13,8 @@ class Alarm;
 class Alarm: public SmartDevice
 {
 
-	public: void update(string aCondition);
+	public: 
+		void update(string condition);
 };
 
 #endif
