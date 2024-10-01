@@ -9,7 +9,7 @@ using namespace std;
 #include "LockedState.h"
 
 string UnlockedState::getStatus() {
-	throw "Not yet implemented";
+	return "Unlocked";
 }
 
 void UnlockedState::performAction(SmartDevice& device, string action) {
