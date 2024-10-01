@@ -6,12 +6,6 @@ using namespace std;
 #define __SmartDevice_h__
 
 #include "DeviceState.h"
-// #include "TurnOffLightCommand.h"
-// #include "Sensor.h"
-// #include "UnlockDoorCommand.h"
-// #include "TurnOnLightCommand.h"
-// #include "LockDoorCommand.h"
-// #include "Client.h"
 
 class DeviceState;
 class TurnOffLightCommand;
@@ -30,6 +24,7 @@ class SmartDevice
 		string location;
 
 	public: 
+		SmartDevice(string deviceType, string location);
 		void performAction(string action);
 		string getStatus();
 		string getDeviceType();
