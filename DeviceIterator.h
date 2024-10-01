@@ -15,7 +15,7 @@ class HouseSection;
 class Room;
 class SmartDevice;
 // class SmartDeviceIterator;
-class DeviceIterator;
+
 
 class DeviceIterator: public SmartDeviceIterator
 {

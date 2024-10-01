@@ -17,7 +17,7 @@ class MacroRoutine
 
 	public: 
 		void execute();
-		void addProcedure(SmartCommand command);
+		void addProcedure(SmartCommand* command);
 		void removeProcedure(SmartCommand* command);
 };
 

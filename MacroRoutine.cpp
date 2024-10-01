@@ -8,7 +8,7 @@ void MacroRoutine::execute() {
 	throw "Not yet implemented";
 }
 
-void MacroRoutine::addProcedure(SmartCommand command) {
+void MacroRoutine::addProcedure(SmartCommand* command) {
 	throw "Not yet implemented";
 }
 

@@ -13,7 +13,7 @@ using namespace std;
 class SmartDevice;
 class Client;
 class SmartDeviceIterator;
-class DeviceCollection;
+class DeviceIterator;
 
 class DeviceCollection
 {
