@@ -5,12 +5,19 @@ using namespace std;
 #include "OnState.h"
 #include "SmartDevice.h"
 #include "DeviceState.h"
+#include "OffState.h"
 
 string OnState::getStatus() {
-	throw "Not yet implemented";
+	return "On";
 }
 
-void OnState::performAction(SmartDevice aDevice, string aAction) {
-	throw "Not yet implemented";
+void OnState::performAction(SmartDevice& device, string action) {
+	if (action == "ToggleOff") {
+        device.setState(new OffState());
+    } else if (action == "Toggle") {
+        device.setState(new OffState());
+    } else {
+        
+    }
 }
 
