@@ -14,7 +14,7 @@ class DeviceState
 {
 	public: 
 		virtual string getStatus() = 0;
-		virtual void performAction(SmartDevice device, string action) = 0;
+		virtual void performAction(SmartDevice& device, string action) = 0;
 };
 
 #endif

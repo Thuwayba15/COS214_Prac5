@@ -18,11 +18,16 @@ SmartDevice::SmartDevice(string deviceType, string location) {
 }
 
 void SmartDevice::performAction(string action) {
-	throw "Not yet implemented";
+	if (state) {
+		state->performAction(*this, action); 
+	}
 }
 
 string SmartDevice::getStatus() {
-	throw "Not yet implemented";
+	if (state) {
+		return state->getStatus();  
+	}
+	return "Unknown"; 
 }
 
 string SmartDevice::getDeviceType() {

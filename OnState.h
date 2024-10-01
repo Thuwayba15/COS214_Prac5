@@ -17,7 +17,7 @@ class OnState: public DeviceState
 
 	public: 
 		string getStatus();
-		void performAction(SmartDevice device, string action);
+		void performAction(SmartDevice& device, string action);
 };
 
 #endif

@@ -19,7 +19,7 @@ class LockedState: public DeviceState
 		string getStatus();
 
 	public: 
-		void performAction(SmartDevice device, string action);
+		void performAction(SmartDevice& device, string action);
 };
 
 #endif
