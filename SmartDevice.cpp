@@ -11,6 +11,12 @@ using namespace std;
 #include "LockDoorCommand.h"
 #include "Client.h"
 
+SmartDevice::SmartDevice(string deviceType, string location) {
+	this->deviceType = deviceType;
+	this->location = location;
+	this->state = nullptr;  
+}
+
 void SmartDevice::performAction(string action) {
 	throw "Not yet implemented";
 }
