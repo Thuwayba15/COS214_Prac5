@@ -6,22 +6,23 @@ using namespace std;
 #define __SmartThermostatIntegrator_h__
 
 #include "LegacyThermostat.h"
-// #include "Client.h"
+#include "Client.h"
 #include "SmartThermostat.h"
 #include "SmartDevice.h"
 
 class LegacyThermostat;
 class Client;
-// class SmartThermostat;
-// class SmartDevice;
+class SmartThermostat;
+class SmartDevice;
 class SmartThermostatIntegrator;
 
-class SmartThermostatIntegrator: public SmartThermostat, public SmartDevice
+class SmartThermostatIntegrator: public SmartThermostat
 {
 	private: 
 		LegacyThermostat legacyThermostat;
 
 	public: 
+		SmartThermostatIntegrator();
 		void setTemperature(int temp);
 		int getTemperature();
 		void update(string condition);
