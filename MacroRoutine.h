@@ -5,20 +5,19 @@ using namespace std;
 #define __MacroRoutine_h__
 
 #include "SmartCommand.h"
-#include <list>
+#include <vector>
 
 class SmartCommand;
-class MacroRoutine;
 
 class MacroRoutine
 {
-	private: 
-		std::list<SmartCommand> commands;
+private:
+    std::vector<SmartCommand*> commands; // Use a vector of raw pointers
 
-	public: 
-		void execute();
-		void addProcedure(SmartCommand* command);
-		void removeProcedure(SmartCommand* command);
+public:
+    void execute();
+    void addProcedure(SmartCommand* command);
+    void removeProcedure(SmartCommand* command);
 };
 
 #endif
