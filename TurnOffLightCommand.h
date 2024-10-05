@@ -9,7 +9,6 @@ using namespace std;
 
 class SmartDevice;
 // class SmartCommand;
-class TurnOffLightCommand;
 
 class TurnOffLightCommand: public SmartCommand
 {
