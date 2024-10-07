@@ -30,6 +30,7 @@ class SmartDevice
 		string getStatus();
 		string getDeviceType();
 		void setState(DeviceState* state);
+		DeviceState* getState();
 		virtual void update(string condition);
 };
 

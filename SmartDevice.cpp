@@ -57,7 +57,23 @@ void SmartDevice::setState(DeviceState* state) {
 	this->state = state;
 }
 
+DeviceState* SmartDevice::getState() {
+    return this->state;
+}
+
 void SmartDevice::update(string condition) {
-	throw "Not yet implemented";
+    if (condition == "motion detected") {
+        if (deviceType == "Light") {
+            performAction("Turn On Lights");
+        } else if (deviceType == "Alarm") {
+            std::cout << "Alarm activated due to motion detection!" << std::endl;
+        }
+    } else if (condition == "temperature changed") {
+        if (deviceType == "Thermostat") {
+            std::cout << "Adjusting thermostat based on temperature change." << std::endl;
+        }
+    } else {
+        std::cout << "No specific response for condition: " << condition << std::endl;
+    }
 }
 
