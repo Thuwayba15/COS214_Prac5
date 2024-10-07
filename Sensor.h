@@ -1,4 +1,6 @@
 #include <exception>
+#include <vector>
+#include <string>
 using namespace std;
 
 #ifndef __Sensor_h__
@@ -12,12 +14,12 @@ class Sensor;
 class Sensor
 {
 	private: 
-		SmartDevice* deviceList;
+		vector<SmartDevice*> deviceList;  
 
 	public: 
-		void addDevice(SmartDevice device);
-		void removeDevice(SmartDevice device);
-		void notifyDevices();
+		void addDevice(SmartDevice* device);
+		void removeDevice(SmartDevice* device);
+		void notifyDevices(string condition);
 };
 
 #endif
