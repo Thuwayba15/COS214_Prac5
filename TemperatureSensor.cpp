@@ -5,6 +5,6 @@ using namespace std;
 #include "Sensor.h"
 
 void TemperatureSensor::senseTemperature() {
-	throw "Not yet implemented";
+	notifyDevices("temperature changed");
 }
 

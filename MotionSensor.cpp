@@ -5,6 +5,6 @@ using namespace std;
 #include "Sensor.h"
 
 void MotionSensor::detectMovement() {
-	throw "Not yet implemented";
+	notifyDevices("motion detected");
 }
 
