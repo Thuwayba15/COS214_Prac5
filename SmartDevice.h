@@ -24,6 +24,7 @@ class SmartDevice
 		string location;
 
 	public: 
+	    SmartDevice(); // Default constructor
 		SmartDevice(string deviceType, string location);
 		void performAction(string action);
 		string getStatus();

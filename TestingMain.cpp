@@ -4,6 +4,16 @@
 #include "OffState.h"
 #include "LockedState.h"
 #include "UnlockedState.h"
+#include "SmartThermostatIntegrator.h"
+#include "SmartDevice.h"
+#include "LegacyThermostat.h"
+#include "SmartThermostat.h"
+#include "SmartCommand.h"
+#include "TurnOnLightCommand.h"
+#include "TurnOffLightCommand.h"
+#include "LockDoorCommand.h"
+#include "UnlockDoorCommand.h"
+#include "MacroRoutine.h"
 
 using namespace std;
 
@@ -42,9 +52,76 @@ void testState(){
     testDoorLockDevice();
 }
 
+void testAdapter()
+{
+    // Create an instance of SmartThermostatIntegrator
+    SmartThermostatIntegrator integrator;
+
+    // Test setting the temperature via the integrator (which adapts the legacy thermostat)
+    cout << "\n-- Testing setTemperature() --" << endl;
+    integrator.setTemperature(22);  // Set temperature to 22°C
+
+    // Test getting the temperature from the integrator (which gets it from the legacy thermostat)
+    cout << "\n-- Testing getTemperature() --" << endl;
+    int currentTemp = integrator.getTemperature();  // Should return 22°C
+    cout << "The current temperature is: " << currentTemp << "°C" << endl;
+
+    // Test setting a new temperature via the integrator
+    cout << "\n-- Testing setTemperature() with a new value --" << endl;
+    integrator.setTemperature(25);  // Set temperature to 25°C
+
+    // Test getting the updated temperature
+    cout << "\n-- Testing getTemperature() after setting a new value --" << endl;
+    currentTemp = integrator.getTemperature();  // Should return 25°C
+    cout << "The current temperature is: " << currentTemp << "°C" << endl;
+
+}
+
+void testCommand()
+{
+    // Create a SmartDevice instance
+    SmartDevice smartDevice;
+
+    // Create command instances
+    TurnOffLightCommand turnOffCommand;
+    TurnOnLightCommand turnOnCommand;
+    LockDoorCommand lockCommand;
+    UnlockDoorCommand unlockCommand;
+
+    // Create a MacroRoutine instance
+    MacroRoutine macroRoutine;
+
+    // Add commands to the MacroRoutine
+    macroRoutine.addProcedure(&turnOnCommand);
+    macroRoutine.addProcedure(&lockCommand);
+    macroRoutine.addProcedure(&turnOffCommand);
+    macroRoutine.addProcedure(&unlockCommand);
+
+    // Execute the MacroRoutine
+    cout << "Executing Macro Routine:" << endl;
+    macroRoutine.execute();
+
+    // Now let's remove a command and test again
+    macroRoutine.removeProcedure(&lockCommand);
+    
+    cout << "\nExecuting Macro Routine after removing lock command:" << endl;
+    macroRoutine.execute();
+
+}
+
 int main() {
     cout<<"**********Testing State Pattern**********"<<endl;
     testState();
+    cout<<endl;
+    cout<<endl;
+    cout<<endl;
+    cout<<"**********Testing Adapter Pattern**********"<<endl;
+    testAdapter();
+    cout<<endl;
+    cout<<endl;
+    cout<<endl;
+    cout<<"**********Testing Command Pattern**********"<<endl;
+    testCommand();
     
     return 0;
 }

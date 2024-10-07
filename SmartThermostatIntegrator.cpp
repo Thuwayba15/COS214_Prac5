@@ -9,15 +9,20 @@ using namespace std;
 #include "SmartThermostat.h"
 #include "SmartDevice.h"
 
+SmartThermostatIntegrator::SmartThermostatIntegrator() {}
+
 void SmartThermostatIntegrator::setTemperature(int temp) {
-	throw "Not yet implemented";
+	legacyThermostat.setTemp(temp);
+    std::cout << "SmartThermostatIntegrator: Set temperature to " << temp << "°C" << std::endl;
 }
 
 int SmartThermostatIntegrator::getTemperature() {
-	throw "Not yet implemented";
+	int temp = legacyThermostat.getTemp();
+    std::cout << "SmartThermostatIntegrator: Current temperature is " << temp << "°C" << std::endl;
+    return temp;
 }
 
 void SmartThermostatIntegrator::update(string condition) {
-	std::cout<<"waiting"<<std::endl;
+    std::cout << "SmartThermostatIntegrator updating based on condition: " << condition << std::endl;
 }
 

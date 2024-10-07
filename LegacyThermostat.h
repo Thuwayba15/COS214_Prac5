@@ -15,6 +15,7 @@ class LegacyThermostat
 	 	int currentTemperature;
 
 	public: 
+		LegacyThermostat() : currentTemperature(20) {} // Default constructor
 		void setTemp(int temp);
 		int getTemp();
 };
