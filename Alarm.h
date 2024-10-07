@@ -13,8 +13,13 @@ class Alarm;
 class Alarm: public SmartDevice
 {
 
-	public: 
-		void update(string condition);
+	private:
+        bool isActive;
+
+	public:
+		Alarm();
+		void update(string condition); 
+		string getStatus();
 };
 
 #endif

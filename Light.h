@@ -14,7 +14,10 @@ class Light: public SmartDevice
 {
 
 	public: 
+		Light();
 		void update(string condition);
+		string getStatus();
+		
 };
 
 #endif

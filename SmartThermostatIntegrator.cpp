@@ -23,6 +23,13 @@ int SmartThermostatIntegrator::getTemperature() {
 }
 
 void SmartThermostatIntegrator::update(string condition) {
-    std::cout << "SmartThermostatIntegrator updating based on condition: " << condition << std::endl;
+    if (condition == "temperature changed") {
+        int newTemp = 22; 
+        setTemperature(newTemp);
+        std::cout << "SmartThermostatIntegrator: Adjusting thermostat based on temperature change to " 
+                  << newTemp << "°C" << std::endl;
+    } else {
+        std::cout << "SmartThermostatIntegrator: No action for condition: " << condition << std::endl;
+    }
 }
 
